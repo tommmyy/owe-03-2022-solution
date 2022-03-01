@@ -38,7 +38,7 @@ export default function App() {
 	const [counter, dispatch] = useReducer(counterReducer, initialValue);
 
 	return (
-		<div className="w-50 m-auto txt-center" style={{ textAlign: 'center' }}>
+		<div className="w-50 m-auto txt-center">
 			<h1>{counter}</h1>
 			<p>
 				<button onClick={() => dispatch(increment())}>Increment</button>{' '}

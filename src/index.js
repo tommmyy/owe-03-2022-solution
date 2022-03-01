@@ -6,7 +6,11 @@ import ReactDOM from 'react-dom';
 // import App from "./Demo1Ex1Solution";
 // import App from "./Demo2";
 // import App from './Demo2Solution';
-import App from './Ex2Solution';
+// import App from './Ex2Solution';
+// import App from './Demo3';
+// import App from './Demo3Solution';
+// import App from './Demo3Solution2';
+import App from './Ex3Solution';
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
