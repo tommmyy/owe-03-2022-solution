@@ -1,9 +1,6 @@
+// same as Demo1Ex1.js
 import { useState } from 'react';
 import './styles.css';
-
-// 1. use initializer - useState(initializer) - for initial value for cookies
-
-// 2. move to custom hook - usePersistentState
 
 const getInitialCookiesValue = () => {
 	const raw = window.localStorage.getItem('cookies');
