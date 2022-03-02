@@ -60,6 +60,7 @@ const Nested = () => {
 
 ## Zadání
 
+Pokračujte v `Ex3.js`.
 Přidejte do objektu témy následující barvy:
 
 ```

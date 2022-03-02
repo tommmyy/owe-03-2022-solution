@@ -1,2 +1,3 @@
-# owe-03-2022-solution
-Created with CodeSandbox
+# OWE 03
+
+- V `src/index.js` pokaždé nastavte správnou cestu ke cvičení.
