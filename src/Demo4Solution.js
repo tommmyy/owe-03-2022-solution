@@ -10,6 +10,9 @@ const Helmet = ({ getTitle }) => {
 	return null;
 };
 
+// inline
+// vs memo
+// vs callback
 export default function App() {
 	const [text, setText] = useState('');
 	const inline = () => 'OWE';

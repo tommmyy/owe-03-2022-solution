@@ -10,9 +10,6 @@ const Helmet = ({ title }) => {
 	return null;
 };
 
-// inline: onChange={(event) => setText(event.target.value)}
-// vs useMemo(() => (event) => ...)
-// vs useCallback((event) => ...)
 export default function App() {
 	const [text, setText] = useState('');
 	return (
