@@ -26,6 +26,7 @@ const Filter = ({ filter, onChange }) => {
 				<label htmlFor="per_page">Per page:</label>
 				<select
 					id="per_page"
+					name="per_page"
 					className="w-48"
 					value={filter.per_page}
 					onChange={handleChange}
