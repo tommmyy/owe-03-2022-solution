@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { HexColorPicker, HexColorInput } from 'react-colorful';
 import './styles.css';
 import { ThemeProvider, useTheme, ThemeConsumer } from './themeSolution';
 
@@ -10,7 +11,7 @@ const Box = ({ as: Root = 'div', theme, style, ...rest }) => (
 					background: '#fff',
 					padding: '16px',
 					borderRadius: theme.borderRadius,
-					border: `solid ${theme.lightBlue} 1px`,
+					border: `solid ${theme.primaryColor} 1px`,
 					...style,
 				}}
 				{...rest}
@@ -30,7 +31,7 @@ const Button = ({ style, ...rest }) => {
 				textTransform: 'uppercase',
 				cursor: 'pointer',
 				width: '100%',
-				background: theme.blue,
+				background: theme.primaryColor,
 				color: theme.white,
 				...style,
 			}}
@@ -41,19 +42,34 @@ const Button = ({ style, ...rest }) => {
 
 const ThemeDesigner = () => {
 	const [theme, onChangeTheme] = useTheme();
+	const controls = {
+		color: theme.primaryColor,
+		onChange: (value) => onChangeTheme({ ...theme, primaryColor: value }),
+	};
 
 	return (
 		<Box>
 			<h1>Theme designer</h1>
-			<input
-				value={theme.borderRadius}
-				type="range"
-				min={0}
-				step={1}
-				onChange={(event) =>
-					onChangeTheme({ ...theme, borderRadius: Number(event.target.value) })
-				}
-			/>
+			<p>
+				<input
+					value={theme.borderRadius}
+					type="range"
+					min={0}
+					step={1}
+					onChange={(event) =>
+						onChangeTheme({
+							...theme,
+							borderRadius: Number(event.target.value),
+						})
+					}
+				/>
+			</p>
+
+			<p>Primary color:</p>
+			<div>
+				<HexColorPicker {...controls} />
+				<HexColorInput {...controls} />
+			</div>
 		</Box>
 	);
 };
